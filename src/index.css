@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-crema text-lila-900 font-sans;
+    background-image: radial-gradient(circle at 10% 10%, rgba(247, 168, 197, 0.16), transparent 28rem), radial-gradient(circle at 90% 18%, rgba(202, 189, 236, 0.18), transparent 30rem);
+  }
+  ::selection {
+    @apply bg-rosa-200 text-lila-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-rosa-600 to-lila-600 px-7 py-3.5 text-base font-semibold text-white shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:from-rosa-700 hover:to-lila-700 hover:shadow-soft-lg active:translate-y-0 active:scale-[0.98];
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-lila-200 bg-white/80 px-7 py-3.5 text-base font-semibold text-lila-800 shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:border-rosa-300 hover:bg-rosa-50 hover:text-rosa-700 active:translate-y-0 active:scale-[0.98];
+  }
+  .gradient-heading {
+    @apply bg-gradient-to-r from-rosa-600 via-rosa-500 to-lila-600 bg-clip-text text-transparent;
+  }
+  .glass-card {
+    @apply border border-white/80 bg-white/75 shadow-soft backdrop-blur-sm;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-medium;
+  }
+  .section-label {
+    @apply text-sm font-semibold uppercase tracking-[0.2em] text-rosa-500;
+  }
+}
